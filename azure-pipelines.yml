@@ -16,7 +16,9 @@ pr:
 resources:
   repositories:
   - repository: azuredevopstemplates
+    type: github
     name: phcaguiar/azuredevopstemplates
+    ref: master
     endpoint: phcaguiar
 stages:
   - stage: Build
