@@ -21,15 +21,16 @@ resources:
     ref: refs/tags/v1.0.0
     endpoint: phcaguiar
 
-parameters:
-  vmImage: 'ubuntu-18.04'
-
 stages:
   - stage: Build
     displayName: Build
     jobs:
       - template: build.yml@azuredevopstemplates
+        parameters:
+          vmImage: 'ubuntu-18.04'
   - stage: Deploy
     displayName: Deploy
     jobs:
       - template: deploy.yml@azuredevopstemplates
+        parameters:
+          vmImage: 'ubuntu-18.04'
