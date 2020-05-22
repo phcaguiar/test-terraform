@@ -18,7 +18,7 @@ resources:
   - repository: azuredevopstemplates
     type: github
     name: phcaguiar/azuredevopstemplates
-    ref: refs/tags/v1.0.0
+    ref: refs/tags/v1.0.1
     endpoint: phcaguiar
 
 stages:
