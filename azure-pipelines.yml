@@ -20,6 +20,10 @@ resources:
     name: phcaguiar/azuredevopstemplates
     ref: refs/tags/v1.0.0
     endpoint: phcaguiar
+
+parameters:
+  vmImage: 'ubuntu-18.04'
+
 stages:
   - stage: Build
     displayName: Build
