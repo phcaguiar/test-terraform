@@ -1,0 +1,29 @@
+name: $(Date:yyyyMMdd)$(Rev:.r)
+trigger:
+  branches:
+    include:
+    - master
+  paths:
+    exclude:
+    - README.md
+pr:
+  branches:
+    include:
+    - master
+  paths:
+    exclude:
+    - README.md
+resources:
+  repositories:
+  - repository: azuredevopstemplates
+    name: phcaguiar/azuredevopstemplates
+    endpoint: phcaguiar
+stages:
+  - stage: Build
+    displayName: Build
+    jobs:
+      - template: build.yml@azuredevopstemplates
+  - stage: Deploy
+    displayName: Deploy
+    jobs:
+      - template: deploy.yml@azuredevopstemplates
