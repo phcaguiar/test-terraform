@@ -1,0 +1,15 @@
+**/.terraform/*
+
+*.tfstate
+*.tfstate.*
+
+!**/requirements.yml
+**/roles/*
+**/.env*
+
+crash.log
+
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
